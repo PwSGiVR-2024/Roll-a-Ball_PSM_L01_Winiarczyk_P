@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -11,8 +12,10 @@ public class Collectible : MonoBehaviour
         collision.gameObject.GetComponent<MovementController>().score += 1;
         Debug.Log("Zdoby³eœ punk!");
         gameObject.SetActive(false);
-    }
 
+     
+    }
+   
  
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,7 @@ public class Collectible : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 20 * Time.deltaTime, 0);
+
+
     }
 }
