@@ -4,10 +4,11 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class MovementController : MonoBehaviour
 {
-    
+    public Text scoreText, Uwon;
     public int score;
     public float thrust =20;
     private Rigidbody rb;
@@ -19,7 +20,6 @@ public class MovementController : MonoBehaviour
     {
         //Fetch the Rigidbody from the GameObject with this script attached
         rb = GetComponent<Rigidbody>();
-
     }
 
     private void Update()
@@ -35,8 +35,20 @@ public class MovementController : MonoBehaviour
             Debug.Log("Wygra³eœ!");
             score = 0;
         }
-    }
+       
 
+    }
+    public void CollectScore()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+        if (score >= 7)
+        {
+            Uwon.text = "You've won!";
+        }
+
+    }
+  
     private void FixedUpdate()
     {
       
@@ -65,6 +77,7 @@ public class MovementController : MonoBehaviour
             rb.AddForce(Vector3.right * thrust);
         }
     }
+
 
    
 }

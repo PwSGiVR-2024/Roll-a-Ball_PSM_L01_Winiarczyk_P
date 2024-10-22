@@ -9,7 +9,7 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        collision.gameObject.GetComponent<MovementController>().score += 1;
+        collision.gameObject.GetComponent<MovementController>().CollectScore();
         Debug.Log("Zdoby³eœ punk!");
         gameObject.SetActive(false);
 
