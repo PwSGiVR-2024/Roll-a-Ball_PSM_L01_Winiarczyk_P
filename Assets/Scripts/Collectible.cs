@@ -6,27 +6,35 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Collectible : MonoBehaviour
 {
+    public AudioSource retrocoin;
 
     private void OnTriggerEnter(Collider collision)
     {
+        retrocoin.Play();
         collision.gameObject.GetComponent<MovementController>().CollectScore();
+        
         Debug.Log("Zdoby³eœ punk!");
-        gameObject.SetActive(false);
+        Invoke("Test", 0.3f);
 
-     
+
+
+    }
+    private void Test()
+    {
+        gameObject.SetActive(false);
     }
    
  
     // Start is called before the first frame update
     void Start()
     {
-        
+        retrocoin = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 20 * Time.deltaTime, 0);
+        transform.Rotate(new Vector3(30,20,0) * Time.deltaTime);
 
 
     }
