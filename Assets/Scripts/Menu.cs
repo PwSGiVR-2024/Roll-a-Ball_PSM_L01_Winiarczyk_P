@@ -18,6 +18,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Level2", LoadSceneMode.Single);
     }
+    public void NLB1_1()
+    {
+        SceneManager.LoadScene("Level3", LoadSceneMode.Single);
+    }
     public void NLB2()
     {
         SceneManager.LoadScene("Credits", LoadSceneMode.Single);
