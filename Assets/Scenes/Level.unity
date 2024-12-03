@@ -35867,6 +35867,7 @@ MonoBehaviour:
   NLB: {fileID: 2070310418}
   score: 0
   thrust: 20
+  playerCamera: {fileID: 1298392236}
 --- !u!54 &976106806
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36392,7 +36393,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 976106804}
-  playerController: {fileID: 976106805}
+  followDistance: 10
+  heightOffset: 5
+  followSpeed: 5
+  rotationSpeed: 100
 --- !u!81 &1298392235
 AudioListener:
   m_ObjectHideFlags: 0
