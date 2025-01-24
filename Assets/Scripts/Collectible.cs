@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,7 +13,7 @@ public class Collectible : MonoBehaviour
         retrocoin.Play();
         collision.gameObject.GetComponent<MovementController>().CollectScore();
         
-        Debug.Log("Zdoby≥eú punk!");
+        Debug.Log("Zdoby≈Çe≈õ punk!");
         Invoke("Test", 0.3f);
 
 
@@ -34,7 +34,7 @@ public class Collectible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(30,20,0) * Time.deltaTime);
+        transform.Rotate(new Vector3(0,25,0) * Time.deltaTime);
 
 
     }

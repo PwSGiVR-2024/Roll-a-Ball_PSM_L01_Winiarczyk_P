@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FauxGravityAtractor : MonoBehaviour
 {
-    public float gravity = -15;
+    public float gravity = -10;
 
     public void Attract(Transform body)
     {
